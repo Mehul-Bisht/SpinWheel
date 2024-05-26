@@ -6,13 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.example.spinwheel.SpinWheelView
+        android:id="@+id/spin_wheel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        app:layout_constraintStart_toStartOf="@id/spin_wheel"
+        app:layout_constraintEnd_toEndOf="@id/spin_wheel"
+        app:layout_constraintTop_toTopOf="@id/spin_wheel"
+        app:layout_constraintBottom_toBottomOf="@id/spin_wheel"
+        android:background="@drawable/circle_24"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/spin_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/spin_wheel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Spin Wheel"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
